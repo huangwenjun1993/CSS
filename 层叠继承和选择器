@@ -1,0 +1,49 @@
+层叠来源：浏览器默认样式<用户定义样式<开发者定义样式
+
+对继承的元素来说，子元素自身的样式优先级高于从父级继承来的样式,继承自己没有增加的父元素样式。
+
+selector:
+      h1{
+        color: black;
+      }
+      //*h1是选择器,{}内是声明，其中color是属性，black是其对应的值。
+  
+  常用选择器：类选择器，ID选择器，伪类选择器。
+  
+  <p class="key" id="principal">
+
+.key {
+  color: green;
+}
+  //*类选择器的声明
+  
+#principal {
+  font-weight: bolder;
+}
+  //* ID选择器的声明
+  
+  优先级：ID选择器>类选择器，同级取后出现的。  //*ID选择器的确定度高于类选择器
+  
+  伪类选择器：加在选择器后面来指定元素相应状态其各个属性的变化。
+  
+    selector:pseudo-class {
+      property: value;
+    }
+    
+  常用的伪类选择器：
+      :link   链接还没有被访问
+      :visited    已经被访问
+      :active   用于用户点击元素那一下的效果
+      :hover    鼠标移动到元素上面  
+      :focus    用于元素成为焦点
+      :first-child    选择某个元素的第一个子元素
+      :nth-child    选择某个元素的一个或多个特定的子元素
+      :nth-last-child   选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算
+      :nth-of-type    选择指定的元素
+      :first-of-type    选择一个上级元素下的第一个同类子元素
+      :last-of-type   选择一个上级元素下的最后一个同类子元素
+      :empty    选择没有内容的元素（或者只有空格等）
+      :target   突出显示活动的 HTML 锚
+      :checked    将一种或多种样式应用于所选的表单控件元素
+      :enabled    用来指定当元素处于可用状态时的样式
+      :disabled   用来指定当元素处于不可用状态时的样式
