@@ -117,3 +117,40 @@
 }
 
 4、实现一个浮动布局，红色容器中每一行的蓝色容器数量随着浏览器宽度的变化而变化 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="yuanjiao.css">
+</head>
+<body>
+	<div id="glass">
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+		<div class="box">box</div>
+	</div>
+</body>
+</html>
+
+.box{
+    float: left;
+    border: solid 2px red;
+    background-color: blue;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+#glass{
+    overflow: hidden;
+    border: solid 2px red;
+    max-width: 672px;
+    background-color: red;
+    margin: 50px auto;
+}
