@@ -1,0 +1,64 @@
+1、margin auto
+#main{
+	max-width: 600px;
+	margin: 0 auto;
+}
+  //*auto水平居中元素内容，剩余宽度会变为左右外边距
+  //*max-width使屏幕缩小时元素有更好的适应性,只使用width窗口缩小时会产生滚轮
+
+2、box-sizing
+    .simple {
+      width: 500px;
+      margin: 20px auto;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    
+    .fancy {
+      width: 500px;
+      margin: 20px auto;
+      padding: 50px;
+      border: solid blue 10px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+      //*元素的内边距和边框不再会增加它的宽度
+
+3、position属性
+static 是默认值,元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。
+relative 元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。
+fixed 一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。
+absolute 元素框从文档流完全删除，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。
+
+4、float、clear
+clear后，拥有clear属性的元素在浮动元素下面显示。
+清除浮动:overflow
+overflow: auto;相当于将浮动元素拖进了另一个元素里面。
+
+5、用width的百分比方式布局
+但是窗口缩小时，有些元素会被挤扁。
+
+6、媒体查询（响应式设计）
+    @media screen and (min-width:600px) {
+      nav {
+        float: left;
+        width: 25%;
+      }
+      section {
+        margin-left: 25%;
+      }
+    }
+    @media screen and (max-width:599px) {
+      nav li {
+        display: inline;
+      }
+    }
+    
+7、inline block和float来铺满页面
+使用 inline-block 来布局：
+  vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top 。
+  需要设置每一列的宽度
+  如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙
+
