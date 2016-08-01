@@ -1,0 +1,119 @@
+1、用两种方法来实现一个背景色为红色、宽度为960px的<DIV>在浏览器中居中
+	<div id="juzhong">
+		GGsimida
+	</div>
+	
+	#juzhong{
+	background-color: red;
+	text-align: center;
+	font-weight: bold;
+	height:  100px;
+	padding-top: 51px; //*一样
+	
+	position: relative;   
+  left: 50%;   
+  margin-left: -480px;   
+  width: 960px;   
+}
+或者
+#juzhong{
+	background-color: red;
+	text-align: center;
+	font-weight: bold;
+	height:  100px;
+	padding-top: 51px; //*一样
+
+  width: 960px;   
+  margin: 0 auto;
+}
+
+2、有的圆角矩形是复杂图案，无法直接用border-radius，请在不使用border-radius的情况下实现一个可复用的高度和宽度都自适应的圆角矩形 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="yuanjiao.css">
+</head>
+<body>  
+	<div class="bor">    
+    	<div class="b1"></div>    
+    	<div class="b2"></div>   
+    	<div class="b3"></div>   
+    	<div class="b4"></div> 
+	</div>  
+	<div class="mid"> 
+	    <p>不使用border-radius的情况下实现一个可复用的高度和宽度都自适应的圆角矩形</p>  
+		</div>  <div class="bor">    
+		<div class="b4"></div>  
+		<div class="b3"></div>   
+		<div class="b2"></div>   
+		<div class="b1"></div> 
+ 	</div>
+</body>
+</html>
+
+.bor div {
+    height: 1px;
+}
+.b1 {
+    margin: 0 3px;
+    background-color: black;
+}
+.b2, .b3, .b4,.mid {
+       border-left: 1px solid black;
+       border-right: 1px solid black;
+}
+.b2 {
+    margin: 0 2px;
+}
+.b3 {
+    margin: 0 1px;
+}
+.b4 {
+    margin: 0 1px;
+}
+.mid p {
+    margin: 0;
+    padding:0 10px;
+    font-size: 12px;
+    line-height: 24px;
+    white-space: pre-wrap;
+}
+
+3、用两种不同的方法来实现一个两列布局，其中左侧部分宽度固定、右侧部分宽度随浏览器宽度的变化而自适应变化
+<body>
+	<section id="left">
+		左边
+	</section>
+	<section id="right">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+	</section>
+</body>
+（1）#left{
+    position: absolute;
+    width: 150px;
+}
+#right{
+    margin-left: 150px;
+}
+（2）
+#left{
+    float: left;
+    width: 150px;
+}
+#right{
+    margin-left: 150px auto;
+}
+（3）
+#left{
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+}
+#right{
+    margin-left: 150px;
+     vertical-align: top;
+}
+
+4、实现一个浮动布局，红色容器中每一行的蓝色容器数量随着浏览器宽度的变化而变化 
