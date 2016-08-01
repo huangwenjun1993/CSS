@@ -1,0 +1,53 @@
+text-decoration:
+    none:　默认值。无装饰
+    blink:　闪烁
+    underline:　下划线
+    line-through:　贯穿线
+    overline:　上划线
+ 
+text-transform:
+    none : 　无转换发生
+    capitalize : 　将每个单词的第一个字母转换成大写，其余无转换发生
+    uppercase : 　转换成大写
+    lowercase : 　转换成小写
+  
+text-align:
+    left	  默认值，左对齐
+    center	居中对齐
+    right　	右对齐
+    justify	两端对齐
+      //*text-align属性只能针对文本文字和img标签，对其他标签无效。
+
+word-spacing:字体间距
+    p
+      {
+      word-spacing:25px;
+      }
+
+white-space:
+    normal：
+    默认处理方式。
+    pre：
+    用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字超出边界时不换行。可查阅pre对象
+    nowrap：
+    强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象。
+    pre-wrap：
+    用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字碰到边界时发生换行。
+    pre-line：
+    保持文本的换行，不保留文字间的空白距离，当文字碰到边界时发生换行。
+
+line-height:对网页文字及其他元素设置行高
+normal
+    默认。设置合理的行间距。
+    number
+    设置数字，此数字会与当前的字体尺寸相乘来设置行间距。
+    length
+    设置固定的行间距。
+    %
+    基于当前字体尺寸的百分比行间距。
+    inherit
+    规定应该从父元素继承 line-height 属性的值。
+    
+font-weight：
+    属性值：normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 继承值
+    
